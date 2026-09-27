@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@import './legacy.css';
+
+/* Design extensions for reusable React skill tiles and filtering controls. */
+.skill-tile {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+  cursor: default;
+  outline-offset: 3px;
+}
+.skill-tile:hover,
+.skill-tile:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.skill-tile:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.skill-logo { flex-shrink: 0; }
+.skill-name { color: var(--muted); }
+.skill-tooltip { background: var(--text); color: var(--bg); }
+.skill-filter { background: var(--surface); border-color: var(--border); color: var(--muted); }
+.skill-filter:hover { border-color: var(--accent); color: var(--text); }
+.skill-filter.selected { background: var(--accent); border-color: var(--accent); color: #0c211a; }
+.skills-note { color: var(--muted); }
+.project-code-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 19px; }
+.project-code-link svg:last-child { margin-left: 3px; }
+.menu-toggle svg { display: block; }
+.hero-visual svg.tag-icon { color: var(--accent); }
+.hero-buttons svg, .text-link svg { flex-shrink: 0; }
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.footer-links button:hover {
+  color: #8ce8ca;
+}
+@media (max-width: 375px) { .skill-tile { min-height: 84px; } }
