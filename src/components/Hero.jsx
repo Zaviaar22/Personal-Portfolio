@@ -25,7 +25,16 @@ export default function Hero() {
       </div>
       <div className="hero-visual" aria-label="Portrait of Zaviaar Rizvi">
         <div className="hero-glow" /><div className="orbit orbit-one" /><div className="orbit orbit-two" />
-        <div className="portrait-frame"><img src="/assets/profile.jpg" alt="Zaviaar Rizvi" width="125" height="176" fetchPriority="high" /></div>
+
+        <div className="portrait-frame">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
+            alt="Zaviaar Rizvi"
+            width="125"
+            height="176"
+            fetchPriority="high"
+          />
+        </div>
         <div className="floating-tag tag-code"><Code2 className="tag-icon" size={19} /> software</div>
         <div className="floating-tag tag-ai"><Sparkles className="tag-icon" size={19} /> AI + data</div>
         <div className="portrait-caption">BUILDING WHAT'S NEXT <span>↗</span></div>
